@@ -12,7 +12,6 @@ export default function ForgotPassword() {
     e.preventDefault();
     try {
       await resetPassword(email);
-      // Best-effort to help user open mail
       window.open('https://mail.google.com', '_blank');
       alert('Reset email sent. Opening Gmail...');
     } catch (err) {
@@ -21,11 +20,11 @@ export default function ForgotPassword() {
   }
 
   return (
-    <div className="card max-w-md">
+    <div className="card max-w-md mx-auto bg-white p-5 mt-5">
       <h2 className="text-xl font-semibold mb-3">Reset Password</h2>
       <form onSubmit={handle}>
-        <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Your email" required className="w-full mb-3 px-3 py-2 rounded-md bg-slate-700 text-slate-100" />
-        <button className="btn">Send reset email</button>
+        <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Your email" required className="w-full mb-3 px-3 py-2 rounded-md bg-white  text-gray-700 border-1 border-gray-400" />
+        <button className="btn btn-accent text-white">Send reset email</button>
       </form>
     </div>
   );

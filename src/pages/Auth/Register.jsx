@@ -39,7 +39,8 @@ export default function Register() {
   }
 
   return (
-    <div className="card max-w-[400px] ">
+   <div className='flex  justify-center mx-auto mt-5'>
+          <div className="card max-w-[400px] bg-white p-5">
       <h2 className="text-xl font-semibold mb-3">Register</h2>
       <form onSubmit={handle}>
         <input value={name} onChange={e => setName(e.target.value)} placeholder="Name" required className="w-full mb-3 px-3 py-2 rounded-md bg-white  text-gray-700 border-1 border-gray-400 " />
@@ -90,5 +91,6 @@ export default function Register() {
 
       <p className="mt-3 text-slate-400">Already have an account? <Link to="/login" className="text-blue-600 underline">Login</Link></p>
     </div>
+   </div>
   );
 }

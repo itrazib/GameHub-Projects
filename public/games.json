@@ -5,7 +5,7 @@
     "coverPhoto": "https://i.imgur.com/4AiXzf8.jpeg",
     "category": "Battle Royale",
     "downloadLink": "https://www.pubg.com/",
-    "description": "PUBG is a fast-paced battle royale game where players fight for survival on dynamic maps.",
+    "description": "PUBG is a fast-paced battle royale game where players fight for survival on dynamic maps filled with intense action and strategy.",
     "ratings": "4.5",
     "developer": "Krafton"
   },
@@ -15,7 +15,7 @@
     "coverPhoto": "https://i.imgur.com/2nCt3Sb.jpg",
     "category": "Simulation",
     "downloadLink": "https://www.stardewvalley.net/",
-    "description": "Farming RPG with deep mechanics and relaxing gameplay.",
+    "description": "A relaxing farming RPG where players grow crops, raise animals, and build relationships in a charming pixel world.",
     "ratings": "4.8",
     "developer": "ConcernedApe"
   },
@@ -25,8 +25,78 @@
     "coverPhoto": "https://i.imgur.com/9Q1Z4Y1l.jpg",
     "category": "Roguelike",
     "downloadLink": "https://www.supergiantgames.com/games/hades/",
-    "description": "A roguelike dungeon-crawler with compelling story and combat.",
+    "description": "A roguelike dungeon-crawler where you battle out of the Underworld while uncovering a powerful story about family and defiance.",
     "ratings": "4.9",
     "developer": "Supergiant Games"
+  },
+  {
+    "id": "4",
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "coverPhoto": "https://i.imgur.com/lKmH0bV.jpg",
+    "category": "Adventure",
+    "downloadLink": "https://www.zelda.com/breath-of-the-wild/",
+    "description": "Explore the vast world of Hyrule, solve puzzles, fight enemies, and uncover the secrets of a fallen kingdom.",
+    "ratings": "4.9",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "5",
+    "title": "Minecraft",
+    "coverPhoto": "https://i.imgur.com/3ZQ3nFJ.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "A creative sandbox where players can build, mine, and explore endless worlds alone or with friends.",
+    "ratings": "4.7",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "6",
+    "title": "Valorant",
+    "coverPhoto": "https://i.imgur.com/5xcnXpa.jpg",
+    "category": "FPS",
+    "downloadLink": "https://playvalorant.com/",
+    "description": "A 5v5 character-based tactical shooter where precise gunplay meets unique agent abilities.",
+    "ratings": "4.6",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "7",
+    "title": "Among Us",
+    "coverPhoto": "https://i.imgur.com/WN0vWph.jpg",
+    "category": "Party",
+    "downloadLink": "https://www.innersloth.com/games/among-us/",
+    "description": "A social deduction game where crewmates must find impostors before being sabotaged in space missions.",
+    "ratings": "4.4",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "8",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://i.imgur.com/Nf2i7dH.jpg",
+    "category": "Action RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "A stunning open-world action RPG featuring elemental combat and exploration across the fantasy land of Teyvat.",
+    "ratings": "4.7",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "9",
+    "title": "Apex Legends",
+    "coverPhoto": "https://i.imgur.com/IrQ7IvK.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.ea.com/games/apex-legends",
+    "description": "A squad-based battle royale game with unique heroes, fast-paced combat, and fluid movement mechanics.",
+    "ratings": "4.6",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "10",
+    "title": "The Witcher 3: Wild Hunt",
+    "coverPhoto": "https://i.imgur.com/jb0l7zX.jpg",
+    "category": "RPG",
+    "downloadLink": "https://thewitcher.com/en/witcher3",
+    "description": "An epic story-driven RPG where you play as Geralt of Rivia, a monster hunter exploring a morally complex fantasy world.",
+    "ratings": "4.9",
+    "developer": "CD Projekt Red"
   }
 ]

@@ -40,7 +40,7 @@ export default function Navbar() {
             <>
               <Link to="/my-profile" className="flex items-center gap-2">
                 <img src={user.photoURL || 'https://via.placeholder.com/40'} alt="avatar" className="w-8 h-8 rounded-full" />
-                <span className="hidden sm:inline">{user.displayName || user.email}</span>
+                <span className="hidden sm:inline text-white">{user.displayName || user.email}</span>
               </Link>
               <button onClick={handleLogout} className="btn">Logout</button>
             </>
