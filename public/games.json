@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "PlayerUnknown's Battlegrounds (PUBG)",
+    "coverPhoto": "https://i.imgur.com/4AiXzf8.jpeg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.pubg.com/",
+    "description": "PUBG is a fast-paced battle royale game where players fight for survival on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Stardew Valley",
+    "coverPhoto": "https://i.imgur.com/2nCt3Sb.jpg",
+    "category": "Simulation",
+    "downloadLink": "https://www.stardewvalley.net/",
+    "description": "Farming RPG with deep mechanics and relaxing gameplay.",
+    "ratings": "4.8",
+    "developer": "ConcernedApe"
+  },
+  {
+    "id": "3",
+    "title": "Hades",
+    "coverPhoto": "https://i.imgur.com/9Q1Z4Y1l.jpg",
+    "category": "Roguelike",
+    "downloadLink": "https://www.supergiantgames.com/games/hades/",
+    "description": "A roguelike dungeon-crawler with compelling story and combat.",
+    "ratings": "4.9",
+    "developer": "Supergiant Games"
+  }
+]

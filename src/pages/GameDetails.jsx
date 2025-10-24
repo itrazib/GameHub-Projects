@@ -1,0 +1,26 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import games from '../../public/games.json';
+
+export default function GameDetails() {
+  const { id } = useParams();
+  const game = games.find(g => g.id === id);
+
+  if (!game) return <div className="p-6">Game not found.</div>;
+
+  return (
+    <div className="grid md:grid-cols-3 gap-6">
+      <div className="md:col-span-1">
+        <img src={game.coverPhoto} alt={game.title} className="w-full rounded-lg" />
+      </div>
+      <div className="md:col-span-2">
+        <h2 className="text-2xl font-bold">{game.title}</h2>
+        <p className="text-slate-400 mt-1">{game.category} • {game.ratings} ★</p>
+        <p className="mt-4">{game.description}</p>
+        <div className="mt-5">
+          <a href={game.downloadLink} target="_blank" rel="noreferrer" className="btn">Install / Visit</a>
+        </div>
+      </div>
+    </div>
+  );
+}
