@@ -6,7 +6,7 @@ import { Outlet } from "react-router";
 export default function Layout() {
   return (
     <>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-gray-300">
         <Navbar  />
       <main className="container mx-auto px-4 py-6 flex-1">
         <Outlet></Outlet>

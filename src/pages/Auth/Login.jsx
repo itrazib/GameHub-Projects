@@ -40,7 +40,7 @@ export default function Login() {
       <div>
         <img className="w-[500px] rounded-2xl" src={banner} alt="" />
       </div>
-      <div className="card max-w-[350px] bg-white">
+      <div className="card max-w-[350px] bg-white p-5">
         <h2 className="text-3xl font-bold mb-3">Login</h2>
         <form onSubmit={handle}>
           <input
@@ -49,7 +49,7 @@ export default function Login() {
             type="email"
             placeholder="Email"
             required
-            className="w-full mb-3 px-3 py-2 rounded-md bg-slate-700 text-slate-100"
+            className="w-full mb-3 px-3 py-2 rounded-md bg-white  text-gray-700 border-1 border-gray-400 "
           />
           <input
             value={password}
@@ -57,9 +57,9 @@ export default function Login() {
             type="password"
             placeholder="Password"
             required
-            className="w-full mb-3 px-3 py-2 rounded-md bg-slate-700 text-slate-100"
+            className="w-full mb-3 px-3 py-2 rounded-md  bg-white  text-gray-700 border-1 border-gray-400 "
           />
-          <button className="btn btn-accent w-full text-white text-xl">
+          <button className="btn btn-accent w-full text-white text-[18px]">
             Login
           </button>
         </form>
