@@ -2,101 +2,31 @@
   {
     "id": "1",
     "title": "PlayerUnknown's Battlegrounds (PUBG)",
-    "coverPhoto": "https://i.imgur.com/4AiXzf8.jpeg",
+    "coverPhoto": "https://i.ibb.co/n8cM357K/pubg.png",
     "category": "Battle Royale",
     "downloadLink": "https://www.pubg.com/",
-    "description": "PUBG is a fast-paced battle royale game where players fight for survival on dynamic maps filled with intense action and strategy.",
+    "description": "PlayerUnknown’s Battlegrounds (PUBG) is one of the most influential battle royale games that redefined online multiplayer experiences. In PUBG, up to 100 players parachute onto a vast and diverse map where they must scavenge for weapons, armor, and supplies while fighting to be the last survivor or team standing. Each match begins with players choosing their landing zones, creating endless strategic possibilities. The playable area gradually shrinks over time, forcing encounters and increasing tension as players adapt to the shrinking safe zone. The game offers multiple maps, including Erangel, Miramar, Sanhok, and Vikendi, each with distinct terrain, weather patterns, and tactical challenges. Whether you prefer sniping from a distance, ambushing in dense forests, or storming buildings with close-range combat, PUBG’s realistic gun mechanics and physics make every fight intense and satisfying. Its ranked mode, seasonal events, and regular updates keep gameplay fresh and competitive. With solo, duo, and squad options, players can enjoy teamwork, coordination, and tactical communication. PUBG’s combination of strategy, reflex, and survival instincts delivers an adrenaline-fueled experience that rewards skill, patience, and smart decision-making. It’s a game that continues to evolve and engage millions of players around the world.",
     "ratings": "4.5",
     "developer": "Krafton"
   },
   {
     "id": "2",
     "title": "Stardew Valley",
-    "coverPhoto": "https://i.imgur.com/2nCt3Sb.jpg",
+    "coverPhoto": "https://i.ibb.co/Z61TDmSr/Logo-of-Stardew-Valley.png",
     "category": "Simulation",
     "downloadLink": "https://www.stardewvalley.net/",
-    "description": "A relaxing farming RPG where players grow crops, raise animals, and build relationships in a charming pixel world.",
+    "description": "Stardew Valley is a heartwarming farming simulation and life-building RPG that invites players to escape the chaos of city life and start anew in a small rural town. After inheriting a run-down farm from your grandfather, you begin your journey by clearing the land, planting crops, raising animals, and slowly transforming your farm into a thriving homestead. But Stardew Valley is much more than farming — it’s about building relationships with the villagers, participating in seasonal festivals, exploring mysterious caves, and uncovering the secrets of the valley. You can fish, cook, craft tools, mine valuable resources, and even marry and start a family. Each in-game season brings unique crops, events, and weather patterns, encouraging players to plan and adapt their strategies. The pixel-art graphics, calming music, and charming storytelling create a nostalgic yet modern experience that captures the joy of simple living. Whether you prefer peaceful farming or adventurous dungeon-exploring, Stardew Valley offers freedom and creativity in abundance. It’s a soothing yet rewarding game that allows players to progress at their own pace, express individuality, and find meaning in community and connection — making it one of the most beloved indie games ever created.",
     "ratings": "4.8",
     "developer": "ConcernedApe"
   },
   {
     "id": "3",
-    "title": "Hades",
-    "coverPhoto": "https://i.imgur.com/9Q1Z4Y1l.jpg",
-    "category": "Roguelike",
-    "downloadLink": "https://www.supergiantgames.com/games/hades/",
-    "description": "A roguelike dungeon-crawler where you battle out of the Underworld while uncovering a powerful story about family and defiance.",
-    "ratings": "4.9",
-    "developer": "Supergiant Games"
-  },
-  {
-    "id": "4",
     "title": "The Legend of Zelda: Breath of the Wild",
-    "coverPhoto": "https://i.imgur.com/lKmH0bV.jpg",
+    "coverPhoto": "https://i.ibb.co/WWVp94v1/The-Legend-Of-Zelda-Breath-Of-The-Wild-Download-Free-PNG.png",
     "category": "Adventure",
     "downloadLink": "https://www.zelda.com/breath-of-the-wild/",
-    "description": "Explore the vast world of Hyrule, solve puzzles, fight enemies, and uncover the secrets of a fallen kingdom.",
+    "description": "The Legend of Zelda: Breath of the Wild is a groundbreaking open-world adventure that reimagines one of gaming’s most iconic franchises. Players step into the role of Link, who awakens from a century-long slumber to find the kingdom of Hyrule in ruins and the evil Calamity Ganon threatening to destroy it. Armed with courage, wit, and the mysterious Sheikah Slate, Link sets out on an epic journey to explore vast landscapes filled with forests, deserts, snowy mountains, and ancient ruins. The game’s physics-driven world encourages creativity — you can climb any surface, glide across valleys, cook meals, craft elixirs, and solve hundreds of environmental puzzles known as Shrines. Every encounter can be approached in countless ways, allowing complete freedom in exploration and combat. Breath of the Wild’s stunning art style, dynamic weather system, and immersive soundtrack create a living, breathing world that feels alive and unpredictable. Players can tame wild horses, battle powerful foes, discover hidden treasures, and uncover Hyrule’s deep history through subtle storytelling. With its combination of exploration, strategy, and discovery, Breath of the Wild delivers a timeless experience that inspires wonder and adventure at every turn.",
     "ratings": "4.9",
     "developer": "Nintendo"
-  },
-  {
-    "id": "5",
-    "title": "Minecraft",
-    "coverPhoto": "https://i.imgur.com/3ZQ3nFJ.jpg",
-    "category": "Sandbox",
-    "downloadLink": "https://www.minecraft.net/",
-    "description": "A creative sandbox where players can build, mine, and explore endless worlds alone or with friends.",
-    "ratings": "4.7",
-    "developer": "Mojang Studios"
-  },
-  {
-    "id": "6",
-    "title": "Valorant",
-    "coverPhoto": "https://i.imgur.com/5xcnXpa.jpg",
-    "category": "FPS",
-    "downloadLink": "https://playvalorant.com/",
-    "description": "A 5v5 character-based tactical shooter where precise gunplay meets unique agent abilities.",
-    "ratings": "4.6",
-    "developer": "Riot Games"
-  },
-  {
-    "id": "7",
-    "title": "Among Us",
-    "coverPhoto": "https://i.imgur.com/WN0vWph.jpg",
-    "category": "Party",
-    "downloadLink": "https://www.innersloth.com/games/among-us/",
-    "description": "A social deduction game where crewmates must find impostors before being sabotaged in space missions.",
-    "ratings": "4.4",
-    "developer": "Innersloth"
-  },
-  {
-    "id": "8",
-    "title": "Genshin Impact",
-    "coverPhoto": "https://i.imgur.com/Nf2i7dH.jpg",
-    "category": "Action RPG",
-    "downloadLink": "https://genshin.hoyoverse.com/",
-    "description": "A stunning open-world action RPG featuring elemental combat and exploration across the fantasy land of Teyvat.",
-    "ratings": "4.7",
-    "developer": "HoYoverse"
-  },
-  {
-    "id": "9",
-    "title": "Apex Legends",
-    "coverPhoto": "https://i.imgur.com/IrQ7IvK.jpg",
-    "category": "Battle Royale",
-    "downloadLink": "https://www.ea.com/games/apex-legends",
-    "description": "A squad-based battle royale game with unique heroes, fast-paced combat, and fluid movement mechanics.",
-    "ratings": "4.6",
-    "developer": "Respawn Entertainment"
-  },
-  {
-    "id": "10",
-    "title": "The Witcher 3: Wild Hunt",
-    "coverPhoto": "https://i.imgur.com/jb0l7zX.jpg",
-    "category": "RPG",
-    "downloadLink": "https://thewitcher.com/en/witcher3",
-    "description": "An epic story-driven RPG where you play as Geralt of Rivia, a monster hunter exploring a morally complex fantasy world.",
-    "ratings": "4.9",
-    "developer": "CD Projekt Red"
   }
 ]

@@ -1,8 +1,7 @@
 import React from 'react';
-import games from '../../public/games.json'
-import { Link } from 'react-router';
-// import { Link } from 'react-router-dom';
+import games from '../../public/games.json';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router';
 
 export default function Home() {
   const popular = [...games].sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings)).slice(0, 6);
@@ -16,15 +15,15 @@ export default function Home() {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Popular Games</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <h2 className="text-3xl font-semibold mb-4 text-center">Popular Games</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
           {popular.map(g => (
-            <div key={g.id} className="card">
-              <img src={g.coverPhoto} alt={g.title} className="w-full h-40 object-cover rounded-lg mb-3" />
+            <div key={g.id} className="card bg-white p-5">
+              <img src={g.coverPhoto} alt={g.title} className="w-full h-130 object-cover rounded-lg mb-3" />
               <h3 className="font-semibold">{g.title}</h3>
               <p className="text-slate-400 text-sm">{g.category} • {g.ratings} ★</p>
               <div className="mt-3">
-                <Link to={`/game/${g.id}`} className="btn">Details</Link>
+                <Link to={`/game/${g.id}`} className="btn btn-accent text-white font-semibold">View Details</Link>
               </div>
             </div>
           ))}
