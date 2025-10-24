@@ -1,7 +1,8 @@
 import React from 'react';
 import games from '../../public/games.json'
-import { Link } from 'react-router-dom';
-// import { motion } from 'framer-motion';
+import { Link } from 'react-router';
+// import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const popular = [...games].sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings)).slice(0, 6);

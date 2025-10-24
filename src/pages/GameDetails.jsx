@@ -1,6 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import games from '../../public/games.json';
+import { useParams } from 'react-router';
 
 export default function GameDetails() {
   const { id } = useParams();
