@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../../firebase/AuthContext";
 import { Link, useLocation, useNavigate } from "react-router";
+import Swal from 'sweetalert2';
 
 import banner from "../../assets/banner.jpg";
 // import { useNavigate, Link, useLocation } from 'react-router-dom';
@@ -20,18 +21,20 @@ export default function Login() {
     e.preventDefault();
     try {
       await loginWithEmail(email, password);
+       Swal.fire("Welcome!", "Login Successful 🎉", "success");
       navigate("/");
-    } catch (err) {
-      alert("Login failed: " + err.message);
+    } catch (error) {
+      Swal.fire("Error", error.message, "error");
     }
   }
 
   async function handleGoogle() {
     try {
       await loginWithGoogle();
+       Swal.fire("Welcome!", "Login Successful 🎉", "success");
       navigate("/");
-    } catch (err) {
-      alert("Google login failed", err.message);
+    } catch (error) {
+      Swal.fire("Error", error.message, "error");
     }
   }
 
