@@ -10,6 +10,7 @@ export default function GameDetails() {
 
   return (
     <div className="grid md:grid-cols-3 gap-17 items-center">
+      <title>{game.title}</title>
       <div className="md:col-span-1 bg-white p-3">
         <img src={game.coverPhoto} alt={game.title} className="w-full rounded-lg" />
       </div>

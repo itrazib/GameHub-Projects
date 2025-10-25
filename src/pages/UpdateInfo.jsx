@@ -22,6 +22,7 @@ export default function UpdateInfo() {
 
   return (
    <div className='max-w-xl mx-auto mt-20'>
+    <title>Update Info</title>
     <h1 className='text-2xl mb-4 font-semibold'>Update Info</h1>
       <form onSubmit={handle} className="card  bg-white p-4 ">
       <label className="block mb-1">Name</label>

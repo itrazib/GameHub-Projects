@@ -10,6 +10,7 @@ export default function Home() {
     .slice(0, 6);
   return (
     <div>
+      <title>Home</title>
       <div className="card mb-6 ">
         <motion.div
           initial={{ opacity: 0 }}
