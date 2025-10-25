@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../../firebase/AuthContext";
 import { Link, useLocation, useNavigate } from "react-router";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 import banner from "../../assets/banner.jpg";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 // import { useNavigate, Link, useLocation } from 'react-router-dom';
 
 export default function Login() {
   const { loginWithEmail, loginWithGoogle } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -21,7 +23,7 @@ export default function Login() {
     e.preventDefault();
     try {
       await loginWithEmail(email, password);
-       Swal.fire("Welcome!", "Login Successful 🎉", "success");
+      Swal.fire("Welcome!", "Login Successful 🎉", "success");
       navigate("/");
     } catch (error) {
       Swal.fire("Error", error.message, "error");
@@ -31,7 +33,7 @@ export default function Login() {
   async function handleGoogle() {
     try {
       await loginWithGoogle();
-       Swal.fire("Welcome!", "Login Successful 🎉", "success");
+      Swal.fire("Welcome!", "Login Successful 🎉", "success");
       navigate("/");
     } catch (error) {
       Swal.fire("Error", error.message, "error");
@@ -40,6 +42,7 @@ export default function Login() {
 
   return (
     <div className="flex justify-center items-center gap-10 mt-5">
+      <title>Login</title>
       <div>
         <img className="w-[500px] rounded-2xl" src={banner} alt="" />
       </div>
@@ -54,17 +57,24 @@ export default function Login() {
             required
             className="w-full mb-3 px-3 py-2 rounded-md bg-white  text-gray-700 border-1 border-gray-400 "
           />
-          <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-            placeholder="Password"
-            required
-            className="w-full mb-3 px-3 py-2 rounded-md  bg-white  text-gray-700 border-1 border-gray-400 "
-          />
-          <button className="btn btn-accent w-full text-white text-[18px]">
+          <div className="relative">
+            <input
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              required
+              className="w-full mb-3 px-3 py-2 rounded-md  bg-white  text-gray-700 border-1 border-gray-400 "
+            />
+            <p onClick={() => setShowPassword(!showPassword)} className="absolute top-3 right-3">
+              {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
+            </p>
+          </div>
+        <div>
+            <button className="btn btn-accent w-full text-white text-[18px]">
             Login
           </button>
+        </div>
         </form>
 
         <div className="mt-3">

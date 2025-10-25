@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext} from '../../firebase/AuthContext';
 import { useLocation } from 'react-router';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 export default function ForgotPassword() {
@@ -13,9 +14,9 @@ export default function ForgotPassword() {
     try {
       await resetPassword(email);
       window.open('https://mail.google.com', '_blank');
-      alert('Reset email sent. Opening Gmail...');
+      toast.success('Reset email sent. Opening Gmail...');
     } catch (err) {
-      alert('Error: ' + err.message);
+      toast('Error: ' + err.message);
     }
   }
 
@@ -26,6 +27,7 @@ export default function ForgotPassword() {
         <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Your email" required className="w-full mb-3 px-3 py-2 rounded-md bg-white  text-gray-700 border-1 border-gray-400" />
         <button className="btn btn-accent text-white">Send reset email</button>
       </form>
+      <ToastContainer position='top-center'></ToastContainer>
     </div>
   );
 }

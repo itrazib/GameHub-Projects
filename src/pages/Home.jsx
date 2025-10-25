@@ -2,6 +2,7 @@ import React from "react";
 import games from "../../public/games.json";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function Home() {
   const popular = [...games]
@@ -13,7 +14,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
         >
           <div class="bg-gradient-to-r from-[#0f2027] via-[#203a43] to-[#2c5364] h-[40vh] flex  items-center justify-center text-white rounded-xl">
             <div>
@@ -64,15 +65,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="card ">
-        <h3 className="font-semibold mb-2">Newsletter</h3>
-        <p className="text-slate-400 mb-3">
+      <section className="card  bg-gradient-to-r from-purple-500 to-indigo-600 text-center p-15 ">
+        <h3 className="font-semibold mb-2 text-4xl text-white">Newsletter</h3>
+        <p className="text-gray-200 mb-3">
           Subscribe to get updates about new indie titles.
         </p>
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            alert("Thanks — check your inbox!");
+            toast.success("Thanks — check your inbox!");
           }}
         >
           <div className="flex gap-2">
@@ -81,10 +82,11 @@ export default function Home() {
               name="email"
               placeholder="you@example.com"
               required
-              className="flex-1 rounded-md px-3 py-2 bg-slate-700 text-slate-100"
+              className="flex-1 rounded-md px-3 py-2 bg-white text-slate-100"
             />
             <button className="btn">Subscribe</button>
           </div>
+          <ToastContainer position="top-center"></ToastContainer>
         </form>
       </section>
     </div>
