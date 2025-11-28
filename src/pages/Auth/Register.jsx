@@ -44,10 +44,10 @@ export default function Register() {
       <div className="card max-w-[400px] bg-white p-5">
         <h2 className="text-xl font-semibold mb-3">Register</h2>
         <form onSubmit={handle}>
-          <input value={name} onChange={e => setName(e.target.value)} placeholder="Name" required className="w-full mb-3 px-3 py-2 rounded-md border border-gray-400" />
-          <input value={photo} onChange={e => setPhoto(e.target.value)} placeholder="Photo URL (optional)" className="w-full mb-3 px-3 py-2 rounded-md border border-gray-400" />
-          <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Email" required className="w-full mb-3 px-3 py-2 rounded-md border border-gray-400" />
-          <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Password" required className="w-full mb-3 px-3 py-2 rounded-md border border-gray-400" />
+          <input  onChange={e => setName(e.target.value)} placeholder="Name" required className="w-full mb-3 px-3 py-2 rounded-md border border-gray-400" />
+          <input onChange={e => setPhoto(e.target.value)} placeholder="Photo URL (optional)" className="w-full mb-3 px-3 py-2 rounded-md border border-gray-400" />
+          <input  onChange={e => setEmail(e.target.value)} type="email" placeholder="Email" required className="w-full mb-3 px-3 py-2 rounded-md border border-gray-400" />
+          <input  onChange={e => setPassword(e.target.value)} type="password" placeholder="Password" required className="w-full mb-3 px-3 py-2 rounded-md border border-gray-400" />
           <button className="btn btn-secondary w-full">Register</button>
         </form>
         {error && <p className="text-red-500 mt-2">{error}</p>}
