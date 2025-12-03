@@ -22,11 +22,11 @@ export default function ForgotPassword() {
   }
 
   return (
-    <div className="card max-w-md mx-auto bg-white p-5 mt-5">
-      <h2 className="text-xl font-semibold mb-3">Reset Password</h2>
+    <div className="card max-w-3xl mx-auto bg-gradient p-5 mt-5">
+      <h2 className="text-xl font-semibold text-white mb-3">Reset Password</h2>
       <form onSubmit={handle}>
-        <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Your email" required className="w-full mb-3 px-3 py-2 rounded-md bg-white  text-gray-700 border-1 border-gray-400" />
-        <button className="btn btn-accent text-white">Send reset email</button>
+        <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Your email" required className="w-full mb-3 px-3 py-2 rounded-md  text-white border-1 border-gray-400" />
+        <button className="btn btn-accent text-black bg-yellow-500">Send reset email</button>
       </form>
       <ToastContainer position='top-center'></ToastContainer>
     </div>

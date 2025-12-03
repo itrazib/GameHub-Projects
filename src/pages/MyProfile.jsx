@@ -17,7 +17,7 @@ export default function MyProfile() {
           <div className="relative md:w-1/3 flex justify-center">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 via-indigo-700 to-indigo-900 blur-md opacity-40"></div>
             <img
-              src={'https://i.ibb.co/Z6gCTKL4/219983.png'}
+              src={user?.photoURL || 'https://i.ibb.co/Z6gCTKL4/219983.png'}
               alt="avatar"
               className="w-40 h-40 rounded-2xl object-cover relative shadow-lg border border-indigo-800"
             />
@@ -51,10 +51,10 @@ export default function MyProfile() {
 
             {/* Buttons */}
             <div className="flex gap-3 mt-6 w-full md:w-4/5">
-              <Link to="/update-info" className="btn btn-primary flex-1">
+              <Link to="/update-info" className="btn bg-yellow-500 text-black flex-1">
                 Update Info
               </Link>
-              <Link to="/" className="btn btn-outline text-white border-indigo-500 flex-1">
+              <Link to="/" className="btn btn-outline text-black bg-yellow-500 flex-1">
                 Home
               </Link>
             </div>

@@ -40,11 +40,11 @@ export default function UpdateInfo() {
               <input
                 value={photo}
                 onChange={e => setPhoto(e.target.value)}
-                className="px-3 py-2 rounded-md bg-[#1a1a25] text-white border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="px-3 py-2 rounded-md bg-[#1a1a25] text-white border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
               />
             </div>
 
-            <button className="mt-4 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-semibold shadow-lg hover:opacity-90 transition text-lg">
+            <button className="mt-4 py-3 rounded-xl bg-yellow-500 text-black font-semibold shadow-lg hover:opacity-90 transition text-lg">
               Update
             </button>
           </form>
