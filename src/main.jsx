@@ -1,7 +1,6 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
 
 import Home from "./pages/Home";
 import Login from "./pages/Auth/Login";
@@ -15,8 +14,12 @@ import NotFound from "./pages/NotFound";
 import Layout from "./layouts/Layout";
 
 import ProtectedRoute from "./components/ProtectedRoute";
-import { createBrowserRouter, RouterProvider } from 'react-router';
-import { AuthProvider } from './context/AuthProvider.jsx';
+import { createBrowserRouter, RouterProvider } from "react-router";
+import { AuthProvider } from "./context/AuthProvider.jsx";
+import Games from "./components/Games.jsx";
+import Blog from "./components/Blog.jsx";
+import Contact from "./components/Contact.jsx";
+import About from "./components/About.jsx";
 
 // Router configuration
 const router = createBrowserRouter([
@@ -26,15 +29,38 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
-      { path: "login", element: <Login /> },
-      { path: "register", element: <Register /> },
-      { path: "forgot-password", element: <ForgotPassword /> },
       {
-        path: "game/:id",
+        path: "login",
+        element: <Login />,
+      },
+      { path: "register",
+         element: <Register /> 
+        },
+      { 
+        path: "forgot-password", 
+        element: <ForgotPassword /> },
+      {
+        path: "/games",
+        element: <Games></Games>,
+      },
+      {
+         path:"/blog",
+         element:<Blog></Blog>
+      },
+      {
+        path:"/about",
+        element:<About></About>
+      },
+      {
+        path:"/contact",
+        element:<Contact></Contact>
+      },
+      {
+        path:"game/:id",
         element: (
-          <ProtectedRoute>
+          
             <GameDetails />
-          </ProtectedRoute>
+         
         ),
       },
       {
@@ -57,8 +83,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider><RouterProvider router={router}></RouterProvider></AuthProvider>
-  </StrictMode>,
-)
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
+  </StrictMode>
+);

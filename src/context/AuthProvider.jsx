@@ -69,7 +69,7 @@ export function AuthProvider({ children }) {
 
   return (
     <AuthContext value={authValue}>
-      {loading ? <div className="p-6">Loading...</div> : children}
+      {loading ? <div className="min-h-screen text-3xl font-bold flex items-center justify-center">Loading...</div> : children}
     </AuthContext>
   );
 }

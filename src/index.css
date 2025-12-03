@@ -9,3 +9,10 @@
   --color-primary: blue;
   --color-secondary: teal;
 }
+
+.text-gradient {
+  @apply  bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent;
+}
+.bg-gradient {
+  @apply bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900;
+}

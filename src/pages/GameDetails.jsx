@@ -1,13 +1,26 @@
-import React from 'react';
-import games from '../../public/games.json';
+
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import useAxios from '../Hooks/useAxios';
 
 export default function GameDetails() {
   const { id } = useParams();
-  const game = games.find(g => g.id === id);
+  const [game, setGame] = useState("")
+  const axiosSecure = useAxios()
+ 
 
-  if (!game) return <div className="p-6">Game not found.</div>;
-
+  useEffect(() => {
+    try{
+      axiosSecure.get(`/games/${id}`)
+      .then(res => {
+        console.log(res.data)
+        setGame(res.data[0])
+      })
+    }catch(err){
+      console.log("someThing Wrong!", err)
+    }
+  }, [])
+ console.log(game.title)
   return (
     <div className="grid md:grid-cols-3 gap-17 items-center">
       <title>{game.title}</title>

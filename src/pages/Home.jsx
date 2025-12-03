@@ -1,71 +1,85 @@
-import React from "react";
-import games from "../../public/games.json";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+
 import { Link } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
 import Banner from "../components/Banner";
+import useAxios from "../Hooks/useAxios";
+import GameCard from "../components/GameCard";
+import Categories from "../components/Categories";
+import UpcomingGames from "../components/UpcomingGames";
+import Testimonials from "../components/Testimonials";
+
 
 export default function Home() {
-  const popular = [...games]
-    .sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings))
-    .slice(0, 6);
+  const [games, setGames] = useState([])
+  const [loading, setLoading] = useState(true)
+  const axiosSecure = useAxios()
+
+  useEffect(() => {
+    setLoading(true)
+    try{
+      axiosSecure.get("/top-rated")
+      .then(res => {
+        console.log(res.data)
+        setGames(res.data)
+      })
+    }catch(err) {
+      alert("something Wrong", err)
+    }finally{
+      setLoading(false)
+    }
+  },[])
+
+  if(loading){
+    return <p className="min-h-screen text-3xl flex justify-center items-center font-semibold">Loading...</p>
+  }
   return (
     <div>
       <title>Home</title>
       <Banner></Banner>
-      <section className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4 text-center">
-          Popular Games
+      <section className="mb-8 mt-6 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-gradient  text-center mb-8">
+          Popular <span className="text-indigo-500">Games</span> 
         </h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-          {popular.map((g) => (
-            <div key={g.id} className="card bg-white p-5">
-              <img
-                src={g.coverPhoto}
-                alt={g.title}
-                className="w-full h-130 object-cover rounded-lg mb-3"
-              />
-              <h3 className="font-semibold">{g.title}</h3>
-              <p className="text-slate-400 text-sm">
-                {g.category} • {g.ratings} ★
-              </p>
-              <div className="mt-3">
-                <Link
-                  to={`/game/${g.id}`}
-                  className="btn btn-accent text-white font-semibold"
-                >
-                  View Details
-                </Link>
-              </div>
-            </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 ">
+          {games.map((game) => (
+            <GameCard key={game._id} game={game}></GameCard>
           ))}
         </div>
       </section>
 
-      <section className="card  bg-gradient-to-r from-purple-500 to-indigo-600 text-center p-15 ">
-        <h3 className="font-semibold mb-2 text-4xl text-white">Newsletter</h3>
-        <p className="text-gray-200 mb-3">
-          Subscribe to get updates about new indie titles.
-        </p>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            toast.success("Thanks — check your inbox!");
-          }}
-        >
-          <div className="flex gap-2">
-            <input
-              type="email"
-              name="email"
-              placeholder="you@example.com"
-              required
-              className="flex-1 rounded-md px-3 py-2 bg-white text-slate-100"
-            />
-            <button className="btn">Subscribe</button>
-          </div>
-          <ToastContainer position="top-center"></ToastContainer>
-        </form>
-      </section>
+      {/* Categories */}
+      <Categories></Categories>
+
+      {/* upcomming */}
+      <UpcomingGames></UpcomingGames>
+      {/* testimonials */}
+      <Testimonials></Testimonials>
+
+     <section className="card bg-gradient max-w-7xl mx-auto  text-center p-10 rounded-3xl shadow-2xl">
+  <h3 className="font-semibold mb-3 text-4xl text-white drop-shadow">Newsletter</h3>
+  <p className="text-gray-200 mb-5">Subscribe to get updates about new indie titles.</p>
+
+  <form
+    onSubmit={(e) => {
+      e.preventDefault();
+      toast.success("Thanks — check your inbox!");
+    }}
+    className="flex flex-col sm:flex-row gap-3 justify-center"
+  >
+    <input
+      type="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+      className="flex-1 rounded-xl px-4 py-3 bg-[#1a1a25] text-white border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+    />
+    <button className="py-3 px-6 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold shadow-lg hover:opacity-90 transition">
+      Subscribe
+    </button>
+  </form>
+  <ToastContainer position="top-center" />
+</section>
     </div>
   );
 }

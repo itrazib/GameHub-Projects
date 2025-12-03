@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
+import logo from '../assets/gamehub.png'
 
 export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
@@ -27,11 +28,10 @@ export default function Navbar() {
   );
 
   return (
-    <div className="navbar max-w-7xl mx-auto text-white shadow-sm bg-gradient-to-r 
-      from-gray-900 via-gray-800 to-gray-900 sticky top-0 z-50">
+    <div className="navbar  max-w-7xl mx-auto text-white shadow-sm bg-gradient rounded-b-2xl sticky top-0 z-50">
 
       {/* Left */}
-      <div className="navbar-start">
+      <div className="navbar-start px-3">
         {/* Mobile Menu */}
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,7 +49,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <Link to="/" className="btn btn-ghost text-xl">GameHub</Link>
+        <Link to="/" className="btn btn-ghost text-xl"><img className='h-8 w-8 rounded-b-box' src={logo} alt="" />GameHub</Link>
       </div>
 
       {/* Center */}
@@ -60,7 +60,7 @@ export default function Navbar() {
       </div>
 
       {/* Right - Avatar + Logout */}
-      <div className="navbar-end">
+      <div className="navbar-end pr-4">
         {!user && (
           <>
             <Link to="/login" className="btn btn-sm mx-1">Login</Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
               <div className="w-10 rounded-full">
                 <img
                   alt="user"
-                  src={user?.photoURL || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"}
+                  src={user?.photoURL || "https://i.ibb.co/Z6gCTKL4/219983.png"}
                 />
               </div>
             </div>
@@ -83,8 +83,8 @@ export default function Navbar() {
               className="menu menu-sm dropdown-content bg-gray-900 
               text-white rounded-box z-50 mt-3 w-52 p-2 shadow">
 
-              <li><Link to="/profile">Profile</Link></li>
-              <li><Link to="/settings">Settings</Link></li>
+              <li><Link to="/my-profile">Profile</Link></li>
+              
 
               <li>
                 <button onClick={handleLogout} className="text-red-400">
