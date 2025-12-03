@@ -56,7 +56,7 @@ export default function Home() {
       {/* testimonials */}
       <Testimonials></Testimonials>
 
-     <section className="card bg-gradient max-w-7xl mx-auto  text-center p-10 rounded-3xl shadow-2xl">
+     <section className="card bg-gradient max-w-7xl mx-auto  text-center p-10 my-6 rounded-3xl shadow-2xl">
   <h3 className="font-semibold mb-3 text-4xl text-white drop-shadow">Newsletter</h3>
   <p className="text-gray-200 mb-5">Subscribe to get updates about new indie titles.</p>
 
@@ -74,7 +74,7 @@ export default function Home() {
       required
       className="flex-1 rounded-xl px-4 py-3 bg-[#1a1a25] text-white border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
     />
-    <button className="py-3 px-6 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold shadow-lg hover:opacity-90 transition">
+    <button className="py-3 px-6 rounded-xl bg-yellow-500 text-black font-semibold shadow-lg hover:opacity-90 transition">
       Subscribe
     </button>
   </form>

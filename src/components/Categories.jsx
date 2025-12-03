@@ -13,7 +13,7 @@ export default function Categories() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-14">
+    <div className="max-w-7xl mx-auto  py-6">
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold">
           Browse by <span className="text-indigo-500">Categories</span>

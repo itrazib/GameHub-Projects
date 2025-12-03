@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import logo from "./../assets/logo1.png"
 
 export default function Footer() {
   return (
     <div className="w-7xl mx-auto ">
+     
       <footer className="bg-gradient  text-gray-200 py-10 rounded-t-2xl">
-      <div className="max-w-7xl mx-auto px-4 md:flex md:justify-between md:items-start">
+      <div className="max-w-3xl mx-auto">
+           <img className="w-70 h-40 text-center mx-auto" src={logo} alt="" />
+      </div>
+      <div className="max-w-5xl mx-auto px-4 md:flex md:justify-between md:items-start">
         {/* Logo & About */}
         <div className="mb-6 md:mb-0">
           <Link to="/" className="text-2xl font-bold text-white mb-2 inline-block">

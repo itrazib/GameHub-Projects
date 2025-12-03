@@ -63,8 +63,8 @@ export default function Navbar() {
       <div className="navbar-end pr-4">
         {!user && (
           <>
-            <Link to="/login" className="btn btn-sm mx-1">Login</Link>
-            <Link to="/register" className="btn btn-sm btn-outline mx-1">Register</Link>
+            <Link to="/login" className="btn btn-sm mx-1 bg-yellow-400">Login</Link>
+            <Link to="/register" className="btn btn-sm btn-outline hover:bg-yellow-400 mx-1">Register</Link>
           </>
         )}
 

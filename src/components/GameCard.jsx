@@ -18,11 +18,11 @@ const GameCard = ({game}) => {
       {/* Card content */}
       <div className="p-4 text-white flex flex-col flex-1 justify-between">
         <div>
-            <p className="text-sm  mb-1 badge badge-soft badge-primary">{game.category}</p>
+            <p className="text-sm  mb-1 badge badge-warning">{game.category}</p>
           <h2 className="text-xl font-bold mb-1">{game.title}</h2>
           
           <p className="text-sm text-gray-300 mb-1 ">Developer:  <span> {game.developer}</span></p>
-          <p className="text-sm text-yellow-400 mb-3 flex justify-between items-center font-semibold">Rating: <span className="badge badge-soft badge-primary badge-md">{game.ratings}</span></p>
+          <p className="text-sm text-yellow-400 mb-3 flex justify-between items-center font-semibold">Rating: <span className="badge badge-warning badge-md">{game.ratings}</span></p>
         </div>
         
         <Link  to={`/game/${game._id}`}>

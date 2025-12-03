@@ -33,12 +33,12 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-16">
+    <div className="max-w-7xl mx-auto  py-6">
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold">
           What <span className="text-indigo-500">Gamers Say</span>
         </h2>
-        <p className="text-slate-400 mt-2">
+        <p className="text-gradient mt-2">
           Thousands of gamers trust GameHub every day
         </p>
       </div>

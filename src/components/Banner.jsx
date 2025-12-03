@@ -61,7 +61,7 @@ export default function Banner() {
           {/* Left: Text */}
           <div className="w-full md:w-1/2 text-white">
             <div className="flex items-center gap-3 mb-4">
-              <span className="px-3 py-1 rounded-full bg-indigo-600/80 text-sm font-semibold">
+              <span className="px-3 py-1 rounded-full badge badge-warning text-sm font-semibold">
                 {games[index].category}
               </span>
               <span className="text-sm text-gray-300">•</span>
@@ -86,7 +86,7 @@ export default function Banner() {
 
               <button
                 onClick={() => (window.location.href = '/login')}
-                className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium"
+                className="px-4 py-2 rounded-xl bg-yellow-500 text-gray-900 font-semibold py-2 rounded-lg hover:bg-yellow-400 transition-colors"
               >
                 Login
               </button>
