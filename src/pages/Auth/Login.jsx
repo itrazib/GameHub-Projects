@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
-import { AuthContext } from "../../firebase/AuthContext";
+
 import { Link, useLocation, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 
 import banner from "../../assets/banner.jpg";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { AuthContext } from "../../context/AuthContext";
 // import { useNavigate, Link, useLocation } from 'react-router-dom';
 
 export default function Login() {

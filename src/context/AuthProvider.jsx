@@ -1,4 +1,4 @@
-import React, { createContext,  useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -9,14 +9,12 @@ import {
   sendPasswordResetEmail,
   updateProfile
 } from 'firebase/auth';
-import { auth } from './firebase.config';
+import { auth } from '../firebase/firebase.config';
+import { AuthContext } from './AuthContext';
 
 
 
 const googleProvider = new GoogleAuthProvider();
-
-export const AuthContext = createContext();
-
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [error, setError] = useState("")
@@ -56,7 +54,7 @@ export function AuthProvider({ children }) {
     return unsubscribe;
   }, []);
 
-  const value = {
+  const authValue = {
     user,
     loading,
     loginWithEmail,
@@ -70,8 +68,8 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext value={authValue}>
       {loading ? <div className="p-6">Loading...</div> : children}
-    </AuthContext.Provider>
+    </AuthContext>
   );
 }

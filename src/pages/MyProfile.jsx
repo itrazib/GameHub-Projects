@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { AuthContext} from '../firebase/AuthContext';
+
 import { Link } from 'react-router';
+import { AuthContext } from '../context/AuthContext';
 
 
 export default function MyProfile() {

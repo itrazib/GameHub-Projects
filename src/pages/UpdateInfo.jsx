@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { AuthContext} from '../firebase/AuthContext';
+
 import { useNavigate } from 'react-router';
+import { AuthContext } from '../context/AuthContext';
 
 export default function UpdateInfo() {
   const { user, updateUserProfile } = useContext(AuthContext);

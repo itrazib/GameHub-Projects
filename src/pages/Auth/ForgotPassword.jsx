@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
-import { AuthContext} from '../../firebase/AuthContext';
+
 import { useLocation } from 'react-router';
 import { toast, ToastContainer } from 'react-toastify';
+import { AuthContext } from '../../context/AuthContext';
 
 
 export default function ForgotPassword() {

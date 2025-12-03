@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { AuthContext } from '../../firebase/AuthContext';
+
 import { Link, useNavigate } from 'react-router'; 
+import { AuthContext } from '../../context/AuthContext';
 
 export default function Register() {
   const { registerWithEmail, loginWithGoogle, error, setError } = useContext(AuthContext);

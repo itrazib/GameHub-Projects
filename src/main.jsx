@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+
 
 import Home from "./pages/Home";
 import Login from "./pages/Auth/Login";
@@ -13,9 +13,10 @@ import ForgotPassword from "./pages/Auth/ForgotPassword";
 import NotFound from "./pages/NotFound";
 
 import Layout from "./layouts/Layout";
-import { AuthProvider } from "./firebase/AuthContext";
+
 import ProtectedRoute from "./components/ProtectedRoute";
 import { createBrowserRouter, RouterProvider } from 'react-router';
+import { AuthProvider } from './context/AuthProvider.jsx';
 
 // Router configuration
 const router = createBrowserRouter([

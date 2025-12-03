@@ -3,6 +3,7 @@ import games from "../../public/games.json";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
+import Banner from "../components/Banner";
 
 export default function Home() {
   const popular = [...games]
@@ -11,32 +12,7 @@ export default function Home() {
   return (
     <div>
       <title>Home</title>
-      <div className="card mb-6 ">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <div class="bg-gradient-to-r from-[#0f2027] via-[#203a43] to-[#2c5364] h-[40vh] flex  items-center justify-center text-white rounded-xl">
-            <div>
-           
-              <div class=" inset-0 flex flex-col items-center justify-center ">
-                <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
-                  Welcome to <span class="text-indigo-500">GameHub</span>
-                </h1>
-                <p class="text-lg md:text-xl mb-6">
-                  Discover the world’s best games, reviews, and communities —
-                  all in one hub.
-                </p>
-                <button class="px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg text-white font-semibold hover:scale-105 transition">
-                  Explore Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
+      <Banner></Banner>
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-center">
           Popular Games
